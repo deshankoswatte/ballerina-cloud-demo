@@ -27,14 +27,19 @@ We will write a Ballerina service which responds "Hello, World!".
 ## Demo 2
 [See Source Code and Artifacts](demo-2)
 
-In this demo we will be creating a Docker image for the service using `@docker` annotation(s).
+In this demo we will be creating a Docker image for the service using multi-stage builds.
 
 ## Demo 3
 [See Source Code and Artifacts](demo-3)
 
-In this demo we will be deploying the Docker image generate earlier(from Demo 2) to Kubernetes.
+In this demo we will be creating a Docker image for the service using `@docker` annotation(s).
 
 ## Demo 4
 [See Source Code and Artifacts](demo-4)
+
+In this demo we will be deploying the Docker image generate earlier(from Demo 2) to Kubernetes.
+
+## Demo 5
+[See Source Code and Artifacts](demo-5)
 
 In this demo we will be deploying the Docker image generate earlier(from Demo 2) to Kubernetes using `@kubernetes` annotation.
