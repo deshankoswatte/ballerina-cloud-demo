@@ -8,6 +8,8 @@ Demo code to show capabilities of ballerina with docker and kubernetes
 
 ### Windows
 - Docker for Windows - https://hub.docker.com/editions/community/docker-ce-desktop-windows.
+- Enable "Expose daemon on tcp://localhost:2375 without TLS" in Docker for Windows settings as follows:
+![Expose daemon on tcp://localhost:2375 without TLS](images/docker-localhost-windows.png "localhost daemon")
 - Postman or any other REST API Client - https://www.getpostman.com/downloads/.
 
 ### Ubuntu/Linux
