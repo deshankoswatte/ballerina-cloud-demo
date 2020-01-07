@@ -15,33 +15,20 @@
 # -----------------------------------------------------------------------
 
 apiVersion: extensions/v1beta1
-kind: Deployment
+kind: Ingress
 metadata:
-  name: helloworld-deployment
+  name: helloworld-ingress
   namespace: wso2
   labels:
-    pattern: kubernetes-demo
+    pattern: K8-demo
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
 spec:
-  strategy:
-    type: Recreate
-  replicas: 2
-  template:
-    metadata:
-      labels:
-        pattern: kubernetes-demo
-    spec:
-      containers:
-      -
-        image: anuruddhal/helloworld:v1
-        name: helloworld
-        imagePullPolicy: IfNotPresent
-        ports:
-        -
-          containerPort: 9090
-          name: web
-        livenessProbe:
-          tcpSocket:
-            port: 9090
-          initialDelaySeconds: 60
-          periodSeconds: 20
-      
+  rules:
+  - host: test.k8.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: helloworld
+          servicePort: 9090
