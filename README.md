@@ -4,12 +4,15 @@ Demo code to show capabilities of ballerina with docker and kubernetes
 ## Prerequisites
 ### Mac
 - Docker for Mac - https://docs.docker.com/docker-for-mac/install/.   
+- Enable Kubernetes - Go to the Docker for Mac ‘Preferences’ and click Kubernetes tab and then tick the “Enable Kubernetes” checkbox.  
 - `curl` command tool. Execute `brew install curl` to install with `brew`.  
 
 ### Windows
-- Docker for Windows - https://hub.docker.com/editions/community/docker-ce-desktop-windows.
+- Docker for Windows - https://hub.docker.com/editions/community/docker-ce-desktop-windows. Follow the steps mentioned in the installation. It might require you to restart the machine. Once installation is complete, run it ‘As Administrator’.
+- Enable Kubernetes - Go to the Docker for Mac ‘Settings’ and click Kubernetes tab and then tick the “Enable Kubernetes” checkbox.
 - Enable "Expose daemon on tcp://localhost:2375 without TLS" in Docker for Windows settings as follows:
 ![Expose daemon on tcp://localhost:2375 without TLS](images/docker-localhost-windows.png "localhost daemon")
+- Install kubectl command if its not available in the command line - https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-windows
 - Postman or any other REST API Client - https://www.getpostman.com/downloads/.
 
 ### Ubuntu/Linux
@@ -42,4 +45,4 @@ In this demo we will be deploying the Docker image generate earlier(from Demo 2)
 ## Demo 5
 [See Source Code and Artifacts](demo-5)
 
-In this demo we will be deploying the Docker image generate earlier(from Demo 2) to Kubernetes using `@kubernetes` annotation.
+In this demo we will be deploying the Docker image generate earlier(from Demo 2) to Kubernetes using `@kubernetes` annotation(s).
